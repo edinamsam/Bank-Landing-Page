@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin-bottom: 10px;
+}
+
+.header-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.header-links a {
+    text-decoration: none;
+    color: grey;
+    font-size: 20px;
+}
+
+.btn-signout {
+    background: rgba(26, 191, 37, 0.758);
+    padding: 7px 15px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    border: none;
+}
+
+.btn-signout:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.intro {
+    background-image: url("/images/bg-intro-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 400px 90%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.intro-msg-container {
+    max-width: 400px;
+}
+
+.intro-msg-container h1 {
+    font-size: 3rem;
+    color: grey;
+    font-weight: bold;
+}
+
+.intro-msg-container p {
+    font-size: 1.2rem;
+    color: grey;
+}
+
+.intro-msg-container button {
+    background: rgba(26, 191, 37, 0.758);
+    padding: 7px 15px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    border: none;
+}
+
+.intro-msg-container button:hover {
+    cursor: pointer;
+}
+
+.details {
+    padding: 5px 40px;
+}
+
+.details-intro {
+   padding-bottom: 15px;
+}
+
+.details-intro h2 {
+    font-size: 2rem;
+    color: grey;
+}
+
+.details-intro p {
+    color: grey;
+    font-size: 1rem;
+}
+
+.details-main {
+    display: flex;
+    gap: 1rem;
+}
+
+.detail {
+    flex: 1;
+}
+
+.detail h3, 
+.detail span {
+    color: grey;
+}
+
+.articles {
+    padding: 10px 40px;
+}
+
+.articles h2 {
+    color: grey;
+    font-weight: bold;
+}
+
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.article {
+    flex: 1;
+}
+
+.article-main span,
+.article-main h3, 
+.article-main p {
+    color: grey;
+}
+
+.footer {
+    background: rgb(57, 57, 84);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-signout footer {
+    
+}
+
+.footer-signout {
+    color: white;
+}
+
