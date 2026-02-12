@@ -33,6 +33,10 @@ body {
     font-size: 20px;
 }
 
+.header-links a:focus {
+    border-bottom: 3px solid var(--clr-primary);
+}
+
 .btn-signout {
     background: rgba(26, 191, 37, 0.758);
     padding: 7px 15px;
@@ -195,6 +199,19 @@ body {
     color: var(--clr-text);
 }
 
+.article h3 a {
+    text-decoration: none;
+    color: var(--clr-text);
+    transition: color 0.2s ease;
+}
+
+.article h3 a:hover,
+.article h3 a:focus {
+    color: var(--clr-primary);
+}
+
+
+
 .footer {
     background: var(--clr-dark);
     display: flex;
@@ -251,6 +268,10 @@ body {
 .footer-nav a {
     text-decoration: none;
     color: white;
+}
+
+.footer nav a:focus {
+    color: var(--clr-primary);
 }
 
 /*.btn-signout.footer {
