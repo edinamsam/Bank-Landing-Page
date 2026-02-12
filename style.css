@@ -79,7 +79,7 @@ body {
     gap: 2.6rem;
     background: white;
     top: 50px;
-    height: 40%;
+    height: 50%;
     width: 90%;
 }
 
@@ -148,6 +148,10 @@ body {
 
 .details-intro {
    padding-bottom: 15px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
 .details-intro h2 {
