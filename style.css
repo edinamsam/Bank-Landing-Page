@@ -1,3 +1,15 @@
+:root {
+    --clr-text: #5c5c5c;
+    --clr-primary: #2ecc71;
+    --clr-dark: #2c3e50;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 10px 0;
@@ -17,7 +29,7 @@ body {
 
 .header-links a {
     text-decoration: none;
-    color: grey;
+    color: var(--clr-text);
     font-size: 20px;
 }
 
@@ -33,10 +45,44 @@ body {
 
 .btn-signout:hover {
     cursor: pointer;
+    opacity: 0.8;
 }
 
 .mobile-menu-btn {
     display: none;
+}
+
+.mobile-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+}
+
+.mobile-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgb(0, 0, 0, 0.6);
+}
+
+.mobile-nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.6rem;
+    background: white;
+    top: 50px;
+    height: 40%;
+    width: 90%;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    font-size: 2.8rem;
+    color: black;
 }
 
 .hidden {
@@ -44,7 +90,7 @@ body {
 }
 
 .intro {
-    background-image: url("/images/bg-intro-desktop.svg");
+    background-image: url("./images/bg-intro-desktop.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 400px 90%;
@@ -64,17 +110,17 @@ body {
 
 .intro-msg-container h1 {
     font-size: 3rem;
-    color: grey;
+    color: var(--clr-text);
     font-weight: bold;
 }
 
 .intro-msg-container p {
     font-size: 1.2rem;
-    color: grey;
+    color: var(--clr-text);
 }
 
 .intro-msg-container button {
-    background: rgba(26, 191, 37, 0.758);
+    background: var(--clr-primary);
     padding: 7px 15px;
     border-radius: 10px;
     font-size: 12px;
@@ -85,6 +131,11 @@ body {
 
 .intro-msg-container button:hover {
     cursor: pointer;
+    opacity: 0.8;
+}
+
+.intro-img {
+    max-width: 60%;
 }
 
 .details {
@@ -97,11 +148,11 @@ body {
 
 .details-intro h2 {
     font-size: 2rem;
-    color: grey;
+    color:var(--clr-text);
 }
 
 .details-intro p {
-    color: grey;
+    color: var(--clr-text);
     font-size: 1rem;
 }
 
@@ -116,7 +167,7 @@ body {
 
 .detail h3, 
 .detail span {
-    color: grey;
+    color: var(--clr-text);
 }
 
 .articles {
@@ -124,7 +175,7 @@ body {
 }
 
 .articles h2 {
-    color: grey;
+    color: var(--clr-text);
     font-weight: bold;
 }
 
@@ -141,11 +192,11 @@ body {
 .article-main span,
 .article-main h3, 
 .article-main p {
-    color: grey;
+    color: var(--clr-text);
 }
 
 .footer {
-    background: rgb(57, 57, 84);
+    background: var(--clr-dark);
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
@@ -161,14 +212,40 @@ body {
 
 .footer-links {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15rem;
+    justify-content: space-between;
 }
 
 .footer-nav {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas: 
+      "about    career"
+      "contact  support"
+      "blog     privacy"
+    ;
+}
+
+.about {
+    grid-area: about;
+}
+
+.contact {
+    grid-area: contact;
+}
+
+.blog {
+    grid-area: blog;
+}
+
+.careers {
+    grid-area: career;
+}
+
+.support {
+    grid-area: support;
+}
+
+.privacy {
+    grid-area: privacy;
 }
 
 .footer-nav a {
@@ -184,7 +261,7 @@ body {
     color: white;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     .header-links {
         display: none;
     }
@@ -251,6 +328,10 @@ body {
     
     .footer-links {
         gap: 0.5rem;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
     }
 }
 

@@ -1,3 +1,10 @@
-let introDiv = document.querySelector(".intro");
+let mobileBtn = document.querySelector(".mobile-menu-btn");
+let modal = document.querySelector(".mobile-modal");
 
-console.log(introDiv);
+mobileBtn.addEventListener("click", () => {
+  modal.classList.remove("hidden");
+});
+
+modal.addEventListener("click", (e) => {
+  modal.classList.add("hidden");
+});
